@@ -1,18 +1,36 @@
 # TODO Everything
 
 # print report, or order if required
-order = input("What would you like? (espresso, latte, cappuccino)")
+
+def begin_order():
+    order = input("What would you like? (espresso, latte, cappuccino)")
+    if order.lower() == "report":
+        print("report")
+    elif order.lower() == "espresso":
+        print("Espresso")
+    elif order.lower() == "latte":
+        print("latte")
+    elif order.lower() == "cappuccino":
+        print("cappuccino")
+    else:
+        print("Incorrect instructions. Please re-enter and check for spelling mistakes. ")
+
+
+ongoing = True
+while ongoing:
+    begin_order()
+
+
+
+
+
+
 # check resources are sufficient
 # process coins/payment/change and make sure it is the right amount
 #check transaction is successful
 # If all else passes, make the coffee and deduct the resources from the running total
 
-# if order.lower() == "report":
-# elif order.lower() == "espresso":
-# elif order.lower() == "latte":
-# elif order.lower() == "cappuccino":
-# else:
-#     print("Incorrect instructions. Please re-enter and check for spelling mistakes. ")
+
 
 
 # comment

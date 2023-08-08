@@ -2,41 +2,14 @@
 
 # print report, or order if required
 
-def begin_order():
-    order = input("What would you like? (espresso, latte, cappuccino)")
-    if order.lower() == "report":
-        print("report")
-    elif order.lower() == "espresso":
-        print("Espresso")
-    elif order.lower() == "latte":
-        print("latte")
-    elif order.lower() == "cappuccino":
-        print("cappuccino")
-    else:
-        print("Incorrect instructions. Please re-enter and check for spelling mistakes. ")
+# ongoing = True
+# while ongoing == True:
+#     order = input("What would you like? (espresso, latte, cappuccino)")
+#     if order.lower() == "off":
+#         ongoing = False
+#    
 
 
-ongoing = True
-while ongoing:
-    begin_order()
-
-# how to do more of this
-
-
-
-
-
-
-# check resources are sufficient
-# process coins/payment/change and make sure it is the right amount
-#check transaction is successful
-# If all else passes, make the coffee and deduct the resources from the running total
-
-
-
-
-# comment
-# requirements
 MENU = {
     "espresso": {
         "ingredients": {
@@ -63,9 +36,57 @@ MENU = {
     }
 }
 
+
+
+
+profit = 0
 resources = {
     "water": 300,
     "milk": 200,
     "coffee": 100,
 }
 
+is_on = True
+
+while is_on:
+    order = input("What would you like? (espresso, latte, cappuccino): ")
+    if order == "off":
+        is_on = False
+    elif order == "report":
+        print(f"Water: {resources['water']}ml")
+        print(f"Milk: {resources['milk']}ml")
+        print(f"Coffee: {resources['coffee']}g")
+    # elif order.lower() == "espresso":
+    #     print("Espresso")
+    # elif order.lower() == "latte":
+    #     print("latte")
+    # elif order.lower() == "cappuccino":
+    #     print("cappuccino")
+    # else:
+    #     print("Incorrect instructions. Please re-enter and check for spelling mistakes. ")
+    
+
+
+
+
+
+
+    # begin_order()
+
+# how to do more of this
+
+
+
+
+
+
+# check resources are sufficient
+# process coins/payment/change and make sure it is the right amount
+#check transaction is successful
+# If all else passes, make the coffee and deduct the resources from the running total
+
+
+
+
+# comment
+# requirements

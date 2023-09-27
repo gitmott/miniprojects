@@ -8,4 +8,3 @@ class Question:
 
 
 new_q = Question("question", "answer")
-print(new_q.text, new_q.answer)

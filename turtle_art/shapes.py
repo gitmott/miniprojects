@@ -7,7 +7,7 @@ tt.pen(fillcolor="DarkViolet", pencolor="black")
 tt.pensize(5)
 
 sides = 3
-while sides < 8:
+while sides <= 10:
     for side in range(sides):
         tt.pd()
         tt.fd(100)

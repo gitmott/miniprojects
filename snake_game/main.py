@@ -1,6 +1,7 @@
 from turtle import Screen, Turtle
 from snake import Snake
 from food import Food
+from scoreboard import Scoreboard
 import time
 
 screen = Screen()
@@ -10,6 +11,7 @@ screen.title("Snake Game")
 
 snake = Snake()
 food = Food()
+scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -21,6 +23,7 @@ game_is_on = True
 while game_is_on:
     screen.update()
     time.sleep(0.1)
+    
 
     snake.move()
 
@@ -31,10 +34,8 @@ while game_is_on:
         # new_seg.goto(position)
         snake.segments.append(new_seg)
         food.refresh()
+        scoreboard.increase_score()
 
-
-        
-# TODO Controls for snake, it currently moves right forever
 
 
 

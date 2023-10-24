@@ -24,6 +24,14 @@ while game_is_on:
 
     snake.move()
 
+    if snake.head.distance(food) < 15:
+        new_seg = Turtle("square")
+        new_seg.color("white")
+        new_seg.penup()
+        # new_seg.goto(position)
+        snake.segments.append(new_seg)
+        food.refresh()
+
 
         
 # TODO Controls for snake, it currently moves right forever

@@ -1,11 +1,11 @@
 from turtle import Screen, Turtle
 from paddles import Paddle
+from ball import Ball
 
 screen = Screen()
 r_paddle = Paddle()
 l_paddle = Paddle()
-
-
+ball = Ball()
 
 
 
@@ -26,5 +26,6 @@ l_paddle.create_paddle((-350, 0))
 game_on = True
 while game_on:
     screen.update()
+    # ball.move()
 
 screen.exitonclick()

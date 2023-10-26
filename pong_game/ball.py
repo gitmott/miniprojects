@@ -1,4 +1,5 @@
 from turtle import Turtle
+import time
 
 class Ball(Turtle):
 
@@ -20,6 +21,11 @@ class Ball(Turtle):
 
     def hit_paddle(self):
         self.x_move *= -1
+
+    def reset_position(self):
+        self.goto(0,0)
+        time.sleep(0.5)
+        self.hit_paddle()
 
            
 

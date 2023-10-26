@@ -33,12 +33,20 @@ while game_on:
     if ball.ycor() >=290 or ball.ycor() <= -290:
         ball.bounce()
 
-    if ball.distance(r_paddle) <= 50 and ball.xcor() > 320:
+    if ball.distance(r_paddle) <= 50 and ball.xcor() > 320 or ball.distance(l_paddle) <= 50 and ball.xcor() < -320:
         ball.hit_paddle()
-
-    if ball.distance(l_paddle) <= 50 and ball.xcor() < -320:
-        ball.hit_paddle()
-    
+    elif ball.xcor() > 380:
+        print("Point L") ## Needs to add score to L
+        # ball.goto(0,0)
+        # ball.hit_paddle()
+        # time.sleep(0.5)
+        ball.reset_position()
+    elif ball.xcor() < -390:
+        print("point R") ## Needs to add score to R
+        # ball.goto(0,0)
+        # ball.hit_paddle()
+        # time.sleep(0.5)
+        ball.reset_position()
 
     
 

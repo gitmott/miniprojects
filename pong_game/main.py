@@ -37,15 +37,9 @@ while game_on:
         ball.hit_paddle()
     elif ball.xcor() > 380:
         print("Point L") ## Needs to add score to L
-        # ball.goto(0,0)
-        # ball.hit_paddle()
-        # time.sleep(0.5)
         ball.reset_position()
     elif ball.xcor() < -390:
         print("point R") ## Needs to add score to R
-        # ball.goto(0,0)
-        # ball.hit_paddle()
-        # time.sleep(0.5)
         ball.reset_position()
 
     

@@ -2,11 +2,13 @@ from turtle import Screen, Turtle
 from paddles import Paddle
 from ball import Ball
 import time
+from scoreboard import Scoreboard
 
 screen = Screen()
 r_paddle = Paddle()
 l_paddle = Paddle()
 ball = Ball()
+scoreboard = Scoreboard()
 
 
 
@@ -22,11 +24,11 @@ screen.onkey(r_paddle.go_down, "Down")
 
 r_paddle.create_paddle((350, 0))
 l_paddle.create_paddle((-350, 0))
-# paddle.create_paddles_left((-350, 0))
+
 
 game_on = True
 while game_on:
-    time.sleep(0.1)
+    time.sleep(0.05)
     screen.update()
     ball.move()
 
@@ -36,11 +38,14 @@ while game_on:
     if ball.distance(r_paddle) <= 50 and ball.xcor() > 320 or ball.distance(l_paddle) <= 50 and ball.xcor() < -320:
         ball.hit_paddle()
     elif ball.xcor() > 380:
-        print("Point L") ## Needs to add score to L
+        scoreboard.add_score_left()
         ball.reset_position()
+
     elif ball.xcor() < -390:
+        scoreboard.add_score_right()
         print("point R") ## Needs to add score to R
         ball.reset_position()
+
 
     
 

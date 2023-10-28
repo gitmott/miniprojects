@@ -13,6 +13,7 @@ class Player(Turtle):
     def create_turtle(self):
         self.shape("turtle")
         self.color("black")
+        # self.heading(270)
         self.penup()
         self.heading()
 

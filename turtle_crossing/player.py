@@ -15,7 +15,7 @@ class Player(Turtle):
         self.color("black")
         # self.heading(270)
         self.penup()
-        self.heading()
+        self.setheading(90)
 
     def refresh_turtle(self):
         self.goto(STARTING_POSITION)

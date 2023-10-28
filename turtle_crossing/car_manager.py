@@ -8,15 +8,17 @@ WIDTH = 40
 LENGTH = 20
 
 
-
-
-class CarManager(Turtle):
+class CarManager:
     
     def __init__(self):
-        super().__init__()
-        self.width(WIDTH)
-        self.color(random.choice(COLORS))
-
-    def make_car(self):
-        pass
+        self.all_cars = []
+        
+    def create_cars(self):
+        new_car = Turtle("square")
+        new_car.shapesize(stretch_wid=2, stretch_len=1)
+        new_car.penup()
+        new_car.color(random.choice(COLORS))
+        random_y = random.randint(-250, 250)
+        new_car.goto(300, random_y)
+        self.all_cars.append(new_car)
 

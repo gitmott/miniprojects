@@ -30,7 +30,7 @@ while game_is_on:
 
 
 
-    if player.ycor() > -120:
+    if player.ycor() > 250:
         # TODO increase car speed
         player.refresh_turtle()
         scoreboard.update_scoreboard()

@@ -19,16 +19,17 @@ for state in state_column:
 correctly_guessed_states = []
 score = 0
 
-game_on = True
-while game_on:
-    answer_state = screen.textinput(title="Guess the State", prompt="Guess a state")
-    answer_state = answer_state.title()
+
+while len(correctly_guessed_states) < 50:
+    answer_state = screen.textinput(title=f"{len(correctly_guessed_states)}/50 States guessed", prompt="Guess a state").title()
     if answer_state in state_list:
         t = turtle.Turtle()
         t.hideturtle()
         t.penup()
         row_data = data[data.state == answer_state]
-        t.goto(int(row_data.), int(row_data.y))
+        t.goto(int(row_data.x.iloc[0]),int(row_data.y.iloc[0]))
+        print("Working")
+        t.write(row_data.state.item())
 
 
 

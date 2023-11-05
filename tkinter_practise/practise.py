@@ -2,7 +2,7 @@ import tkinter
 
 def button_click():
     user_input = input.get()
-    # my_label.config(text= f"{user_input}")
+    my_label.config(text= f"{user_input}")
 
 
 window = tkinter.Tk()

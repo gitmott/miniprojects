@@ -14,9 +14,7 @@ window.config(padx=20, pady=20)
 my_label = tkinter.Label(text="I am a label", font=("Arial", 24, "underline"))
 my_label.config(text="New Text")
 my_label.grid(column=0, row=0)
-
 my_label["text"] = "New Text"
-
 
 
 
@@ -33,10 +31,11 @@ input = tkinter.Entry(width= 10)
 input.grid(column=3, row=2)
 # user_input = input.get()
 
-
-
 window.mainloop()
 
+
+
+# # Args and kwargs
 # def add(*args):
 #     total = 0
 #     for arg in args:
@@ -52,7 +51,5 @@ window.mainloop()
 #     n += kwargs["add"]
 #     n *= kwargs["multiply"]
 #     print(n)
-
-
 
 # calculate(2, add=3, multiply=5)
